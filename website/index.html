@@ -1,0 +1,371 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="CSS/layout1.css">
+    <link rel="stylesheet" type="text/css" href="CSS/form.css">
+    <link rel="stylesheet" type="text/css" href="CSS/pre.css">
+    <link rel="stylesheet" type ="text/css" href="CSS/animate.css">
+    <link rel="stylesheet" type ="text/css" href="CSS/blueberry.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="Jquery/jquery.blueberry.js"></script>
+    <script src="Jquery/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script>$(window).load(function(){ $(".blueberry").blueberry(); });</script>
+    <style>
+        @font-face {
+            font-family:Moon;
+            src: url("Moon Light.otf") format("opentype");
+        }
+        @font-face {
+            font-family:Nautilus;
+            /*src: url("Nautilus.otf") format("opentype");*/
+        }
+        @font-face{
+            font-family:Alex;
+            /*src: url("AlexBrush-Regular.ttf") format("truetype");*/
+        }
+        @font-face{
+
+            font-family:Parisish;
+            src: url("Parisish.ttf") format("truetype");
+        }
+        @font-face{
+            font-family:Debby;
+            /*src: url("Debby.otf") format("opentype");*/
+        }
+        @font-face {
+            font-family:Nexa;
+            src: url("Nexa Light.otf") format("opentype");
+        }
+        @font-face {
+            font-family:London;
+            /*src: url("Londonfill.ttf") format("truetype");*/
+        }
+        .Result_card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            display : inline-block;
+            margin: inherit;
+            text-align: center;
+            left : -33%;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class = "furry"><img src = "Images/petface1.png"></div>
+</header>
+<div class = " wow article-block slideInUp">
+    <h1  class="wow gap fadeIn" data-wow-duration="1s" data-wow-delay="1s">An image search tool for finding pets</h1>
+    <div class="article second-art">
+        <button class="button" onclick = "toggleUploadContainer()">Search for pets</button>
+    </div>
+</div>
+
+<!-- Upload pet container -->
+<div class="container" id="container1" style="display: none">
+    <h1>Please upload picture of your pet
+    </h1>
+    <div class="avatar-upload" >
+        <div class="avatar-preview">
+            <div id="imagePreview" style="background-image:url('Images/Cat_sil.png')";></div>
+        </div>
+        <div>
+            <input type='file' id="imageUpload" required="" accept=".png, .jpg, .jpeg" />
+            <button class="button" id ="btn4" onclick = "searchPets()">Search</button>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="results" style="display: none">
+    <div class="article1">
+        <div class="article1 first-art">
+            <div class="avatar-upload" >
+                <div class="avatar-preview">
+                    <div id="profile_image" style="background-image:url('Images/Cat01.jpg')";></div>
+                </div>
+            </div>
+            <h1 id="profile_name"> Name : Jose the pirate</h1>
+            <h1 id="profile_id"> id : 0111 </h1>
+            <h1 id="profile_animal">Animal type : Cat</h1>
+            <h1 id="profile_lost">Lost or found : Lost</h1>
+            <p><a href="mailto:someone@example.com?Subject=Pet%20Match" target="_top"><button button class="button">Contact</button></a></p>
+        </div>
+
+        <div class="article1 second-art1">
+            <div class="avatar-upload" >
+                <div class="avatar-preview">
+                    <div id="profile1" style="background-image:url('Images/Dog01.jpg')";></div>
+                </div>
+            </div>
+            <h1> Name : lucy</h1>
+            <h1> id : 0251 </h1>
+            <h1>Animal type : Dog</h1>
+            <h1>Lost or found : Lost</h1>
+            <p><a href="mailto:someone@example.com?Subject=Pet%20Match" target="_top"><button button class="button">Contact</button></a></p>
+        </div>
+        <div class="article1 third-art">
+            <div class="avatar-upload" >
+                <div class="avatar-preview">
+                    <div id="profile2" style="background-image:url('Images/Dog2.jpg')";></div>
+                </div>
+            </div>
+            <h1> Name : jessie </h1>
+            <h1> id : 0008</h1>
+            <h1>Animal type : Dog</h1>
+            <h1>Lost or found : Lost</h1>
+            <p><a href="mailto:someone@example.com?Subject=Pet%20Match" target="_top"><button button class="button">Contact</button></a></p>
+        </div>
+    </div>
+    <div class="article2">
+        <div class="article2 first-art">
+            <div class="avatar-upload" >
+                <div class="avatar-preview">
+                    <div id="profile3" style="background-image:url('Images/Cat_sil.png')";></div>
+                </div>
+            </div>
+            <h1> Name : Snoop </h1>
+            <h1> id : 0664 </h1>
+            <h1>Animal type : Cat</h1>
+            <h1>Lost or found : Lost</h1>
+            <p><a href="mailto:someone@example.com?Subject=Pet%20Match" target="_top"><button button class="button">Contact</button></a></p>
+        </div>
+
+        <div class="article2 second-art1">
+            <div class="avatar-upload" >
+                <div class="avatar-preview">
+                    <div id="profile4" style="background-image:url('Images/Cat_sil.png')";></div>
+                </div>
+            </div>
+            <h1> Name : slash </h1>
+            <h1> id : 0452 </h1>
+            <h1>Animal type : Cat</h1>
+            <h1>Lost or found : Lost</h1>
+            <p><a href="mailto:someone@example.com?Subject=Pet%20Match" target="_top"><button button class="button">Contact</button></a></p>
+        </div>
+        <div class="article2 third-art">
+            <div class="avatar-upload" >
+                <div class="avatar-preview">
+                    <div id="profile5" style="background-image:url('Images/Cat_sil.png')";></div>
+                </div>
+            </div>
+            <h1> Name : slash </h1>
+            <h1> id : 0452 </h1>
+            <h1>Animal type : Cat</h1>
+            <h1>Lost or found : Lost</h1>
+            <p><a href="mailto:someone@example.com?Subject=Pet%20Match" target="_top"><button button class="button">Contact</button></a></p>
+        </div>
+        <div class="second-art1" id="register-pet">
+            <h1> If you don't see you're pet, click below to register a new profile.</h1>
+            <p><button class="button" onclick = "toggleElement('register-box');">Register Pet</button></p>
+        </div>
+    </div>
+</div>
+<!-- Pet profile form -->
+<br/>
+<div id="register-box" style="display: none">
+    <div class="left">
+        <h1>New Pet Profile</h1>
+        <input type="text" name="petname" placeholder="Pet's Name" required/>
+        <select id="pettype" name="pettype" placeholder="Pet type">
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+        </select>
+        <select id="lostfound" name="lostfound" placeholder="Lost or Found">
+            <option value="lost">I've lost this pet</option>
+            <option value="found">I've found this pet</option>
+        </select>
+        <input type="text" name="email" placeholder="Contact E-mail" required/>
+        <input type="text" name="notes" placeholder="Additional Notes" required/>
+        <input type="submit" name="register_new_pet" value="Register" onclick="toggleElement('register-box');toggleElement('register-pet');toggleElement('register-success');" />
+    </div>
+    <div class="right">
+        <div class="avatar-upload" >
+            <div class="avatar-preview">
+                <div id="registerNew"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="register-success" style="display: none">
+    <div class="left">
+        <h1>Congratulations, you have successfully registered your pet!</h1>
+        <p><button class="button" onclick = "window.location.reload()">Return</button></p>
+    </div>
+    <div class="right">
+        <div class="avatar-upload" >
+            <div class="avatar-preview">
+                <div id="success"><img src="Images/cropped-checkmark.png" style="width:100%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div id="slide1" class="mySlides" style="display: none">
+    <img src="Images/Cat01.jpg" style="width:100%">
+</div>
+<div id="slide2" class="mySlides" style="display: none">
+    <img src="Images/Dog2.jpg" style="width:100%">
+</div>
+<div id="slide3" class="mySlides" style="display: none">
+    <img src="Images/Cat03.jpg" style="width:100%">
+</div>
+<script>
+  showSlides(-1);
+  function showSlides(activeSlideIdx) {
+    var slides = document.getElementsByClassName("mySlides");
+    if (activeSlideIdx >= 0)  $('#' + slides[activeSlideIdx].id).fadeOut(1000);
+    activeSlideIdx += 1
+    if (activeSlideIdx >= slides.length) activeSlideIdx = 0
+    $('#' + slides[activeSlideIdx].id).fadeIn(4000);
+    setTimeout(showSlides.bind(null, activeSlideIdx), 10000);
+  }
+
+  // Initialize google maps
+  function myMap() {
+    var myCenter = new google.maps.LatLng(41.385063,2.173404);
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom: 12};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+  }
+
+  function toggleUploadContainer() {
+    var x = document.getElementById("container1");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function showImage(file, elId) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $(elId).css('background-image', 'url('+ e.target.result +')');
+      $(elId).hide();
+      $(elId).fadeIn(650);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function uploadImage(input) {
+    if (input.files && input.files[0]) showImage(input.files[0], '#imagePreview');
+  }
+
+  function toggleElement(elId) {
+    var x = document.getElementById(elId);
+    if (x.style.display === "none") x.style.display = "block";
+    else x.style.display = "none";
+  }
+
+  function base64toBlob(base64Data, contentType) {
+    contentType = contentType || '';
+    var sliceSize = 1024;
+    var byteCharacters = atob(base64Data);
+    var bytesLength = byteCharacters.length;
+    var slicesCount = Math.ceil(bytesLength / sliceSize);
+    var byteArrays = new Array(slicesCount);
+
+    for (var sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
+      var begin = sliceIndex * sliceSize;
+      var end = Math.min(begin + sliceSize, bytesLength);
+
+      var bytes = new Array(end - begin);
+      for (var offset = begin, i = 0; offset < end; ++i, ++offset) {
+        bytes[i] = byteCharacters[offset].charCodeAt(0);
+      }
+      byteArrays[sliceIndex] = new Uint8Array(bytes);
+    }
+    return new Blob(byteArrays, { type: contentType });
+  }
+
+  function showImage(file, elId) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $(elId).css('background-image', 'url('+ e.target.result +')');
+      $(elId).hide();
+      $(elId).fadeIn(650);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function displayMatchedProfile(profile) {
+    if (profile) {
+      $("#profile_name").text(profile.name);
+      $("#profile_id").text(profile.id);
+      $("#profile_animal").text(profile.animal);
+      $("#profile_lost").text(profile.lost);
+      showImage(base64toBlob(profile.image), "#profile_image");
+    }
+    toggleElement("results");
+    showImage(getUploadedImage(), "#registerNew");
+  }
+
+  function recognizeImage(b64Image) {
+    $("#btn4").text('...Searching for matches...');
+    return $.ajax({
+      url: window.location.origin + '/cat_recognition_api/v1/actions/get_response',
+      type: "POST",
+      data: JSON.stringify({ 'image': b64Image }),
+      contentType: "application/json",
+      success: function (data) {
+        console.log(data.response);
+        $("#btn4").text('Search');
+        if (data.response && data.response.image) displayMatchedProfile(data.response);
+        else alert(data.response);
+    },
+      error: function (data) {
+        console.log(data);
+        $("#btn4").text('Search');
+      }
+    });
+  }
+
+  function registerNewPet() {
+    //TODO: send profile to database for storage.
+  }
+
+  function getUploadedImage() {
+    var files = document.getElementById('imageUpload').files;
+    if (files != null) return files[0];
+  }
+
+  function getBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result.split(',')[1]);
+      reader.onerror = error => reject(error);
+    });
+  }
+
+  function searchPets() {
+    var imageFile = getUploadedImage();
+    if (!imageFile) {
+      console.log("Missing image file to recognize");
+      return;
+    }
+
+    getBase64(imageFile).then(b64Image => recognizeImage(b64Image));
+  }
+
+  $("#imageUpload").change(function() {
+    uploadImage(this);
+  });
+</script>
+</body>
